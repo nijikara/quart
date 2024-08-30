@@ -1,1 +1,1 @@
-web: gunicorn -k quart.worker.GunicornWorker -w 4 app:app
+web: hypercorn -b 0.0.0.0:10000 app:app
